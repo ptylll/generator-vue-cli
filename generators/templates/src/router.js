@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import routeMap from "./config/router.config";
+import Login from "./views/login";
 
 Vue.use(VueRouter);
 

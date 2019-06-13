@@ -50,12 +50,12 @@ module.exports = merge(common, {
         loader: "babel-loader"
       },
       {
-        // 处理png svg jpg gif图片
+        //处理png svg jpg gif图片
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           "file-loader",
           {
-            loader: "image-webpack-loader", // 图片压缩
+            loader: "image-webpack-loader", //图片压缩
             options: {
               limit: 5000,
               name: "images/[name].[ext]",
@@ -63,7 +63,7 @@ module.exports = merge(common, {
                 progressive: true,
                 quality: 65
               },
-              // Optipng.enabled: false will disable optipng
+              // optipng.enabled: false will disable optipng
               optipng: {
                 enabled: false
               },
@@ -74,7 +74,7 @@ module.exports = merge(common, {
               gifsicle: {
                 interlaced: false
               },
-              // The webp option will enable WEBP
+              // the webp option will enable WEBP
               webp: {
                 quality: 75
               }

@@ -26,12 +26,12 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        // 处理png svg jpg gif图片
+        //处理png svg jpg gif图片
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           "file-loader",
           {
-            loader: "image-webpack-loader", // 图片压缩
+            loader: "image-webpack-loader", //图片压缩
             options: {
               limit: 5000,
               name: "images/[name].[ext]"
