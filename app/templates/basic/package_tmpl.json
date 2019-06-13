@@ -1,0 +1,20 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "start": "node lib/index.js",
+    "test": "./node_modules/.bin/mocha --harmony --require co-mocha",
+    "apidoc": "./node_modules/.bin/apidoc -i lib/controllers/ -o apidoc/"
+  },
+  "keywords": [
+    "koa"
+  ],
+  "author": "",
+  "license": ""
+}
