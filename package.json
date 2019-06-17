@@ -1,10 +1,10 @@
 {
   "name": "generator-vue-webpack-cli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "generator构建vue项目",
   "homepage": "https://github.com/ptylll/generator-vue-cli",
   "author": {
-    "name": "pty",
+    "name": "name",
     "email": "pantianyi@sodao.com",
     "url": ""
   },

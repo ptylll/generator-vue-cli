@@ -11,7 +11,7 @@ module.exports = merge(common, {
     inline: true,
     proxy: {
       "/api": {
-        target: "https://api.douban.com/",
+        target: "https://api.xxxx.com/",
         pathRewrite: {
           "^/api": "/v2/movie"
         },
