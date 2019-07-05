@@ -1,13 +1,17 @@
 const merge = require("webpack-merge");
-const common = require("./webpack.base.js");
+const webpack = require('webpack')
+const HappyPack = require("happypack")
+const os = require('os')
 const path = require("path");
+const common = require("./webpack.base.js");
+const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length })
 
 module.exports = merge(common, {
   devtool: "inline-source-map",
   devServer: {
     contentBase: "../dist",
     hot: true,
-    port: 8081,
+    port: 8088,
     inline: true,
     proxy: {
       "/api": {
@@ -41,5 +45,20 @@ module.exports = merge(common, {
       }
     ]
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env": "'development'"
+    }),
+    new HappyPack({
+      id: 'happyBabel',
+      loaders: [
+        {
+          loader: 'babel-loader?cacheDirectory=true'
+        }
+      ],
+      threadPool: happyThreadPool,
+      verbose: true
+    })
+  ],
   mode: "development"
 });
