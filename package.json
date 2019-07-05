@@ -1,6 +1,6 @@
 {
   "name": "generator-vue-webpack-cli",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "generator构建vue项目",
   "homepage": "https://github.com/ptylll/generator-vue-cli",
   "author": {
@@ -14,7 +14,10 @@
   "main": "generators/index.js",
   "keywords": [
     "generator",
-    "yeoman-generator"
+    "yeoman-generator",
+    "vue",
+    "vue-cli",
+    "vue-webpack"
   ],
   "devDependencies": {
     "yeoman-test": "^1.7.0",

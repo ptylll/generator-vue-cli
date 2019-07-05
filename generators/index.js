@@ -51,6 +51,7 @@ module.exports = class extends Generator {
     this._writpostcssConfig();
     this._writSrc();
     this._writHtml();
+    this._writStatic();
   }
 
   _writPackageJson() {
@@ -180,6 +181,14 @@ module.exports = class extends Generator {
     this.fs.copy(
       this.templatePath("./src/router.js"),
       this.destinationPath("./src/router.js")
+    );
+  }
+
+  // 静态文件夹
+  _writStatic() {
+    this.fs.copy(
+      this.templatePath("./static/logo.png"),
+      this.destinationPath("./static/logo.png")
     );
   }
 

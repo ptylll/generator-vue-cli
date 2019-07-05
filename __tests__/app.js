@@ -12,6 +12,7 @@ describe("generator-vue-webpack-cli:app", () => {
 
   it("creates files", () => {
     assert.file(["src"]);
+    assert.file(["static"]);
     assert.file(["config"]);
     assert.file([".babelrc"]);
     assert.file([".gitignore"]);
