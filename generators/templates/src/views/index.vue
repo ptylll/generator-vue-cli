@@ -38,9 +38,9 @@ export default {
 
 <style lang="scss" scoped>
 #index{
-  text-align: center;
-  font-size: 30px;
-  color: #f00;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
   margin: 20px;
   .comm{
     margin-top: 20px;
